@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>CreateJS WebGL Demo</title>
+
+		<script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
+
+		<script src="libs/easeljs-NEXT.min.js"></script>
+		<script src="libs/SpriteContainer.js"></script>
+		<script src="libs/SpriteStage.js"></script>
+
+		<script src="main.js"></script>
+
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+				letter-spacing: 0.25em;
+				background: #000;
+			}
+
+			#myCanvas {
+				background: #000;
+				position: relative;
+			}
+
+			div#ui {
+				position: absolute;
+				bottom: 64px;
+				line-height: 64px;
+				width: 100%;
+				user-select: none; /* CSS3 */
+				-moz-user-select: none; /* Firefox */
+				-webkit-user-select: none; /* Safari、Chromeなど */
+				-ms-user-select: none; /* IE10かららしい */
+				z-index: 100;
+			}
+
+			div#btnAdd, div#btnRemove {
+				position: absolute;
+				top: 0;
+				width: 64px;
+				height: 64px;
+				background: #3498db;
+				color: #FFF;
+				font-size: 200%;
+				text-align: center;
+				cursor: pointer;
+			}
+
+			div#btnAdd:active, div#btnRemove:active {
+				background: #2980b9;
+			}
+
+			div#btnAdd {
+				right: 0px;
+			}
+
+			div#btnRemove {
+				left: 0px;
+			}
+
+			div#numParticle {
+				font-size: 200%;
+				color: #fff;
+				background: #34495e;
+				width: 100%;
+				height: 64px;
+				position: absolute;
+				left: 0px;
+				top: 0;
+				text-align: center;
+			}
+
+			div#fps{
+				background: #000;
+				color: #888;
+				position: absolute;
+				right: 0;
+				top: 0;
+				font-size: 100%;
+				height: 32px;
+				line-height: 32px;
+				text-align: center;
+				font-weight: bold;
+				letter-spacing: 0;
+				padding: 0 0.5em;
+				z-index: 101;
+			}
+
+			#radio{
+				position: absolute;
+				left: 0;
+				top: 0;
+				color:  #888;
+				background: #000;
+				font-weight: bold;
+				letter-spacing: 0;
+				line-height: 32px;
+				height: 32px;
+				padding: 0 0.5em;
+				z-index: 102;
+			}
+		</style>
+	</head>
+	<body>
+
+	<canvas id="myCanvas"
+			width="960"
+			height="540"></canvas>
+
+	<div id="ui">
+		<div id="numParticle"></div>
+		<div id="btnRemove">&#8722</div>
+		<div id="btnAdd">&#43;</div>
+	</div>
+
+	<div id="fps"></div>
+	<div id="radio"><input id="radioHR" type="checkbox" ><label for="radioHR">High DPI</label></div>
+
+	</body>
+</html>
